@@ -38,6 +38,17 @@ El programa solicita:
 - Tipo de cliente ("nuevo" o "recurrente") (string)
 - Cantidad de ítems (int)
 
+  Salidas del sistema:
+
+-categoriaDespacho (string)
+
+-costoEnvio (double)
+
+-Mensaje informativo mostrado en consola
+Resultado del Pedido 
+Categoría de despacho: Envío Express
+Costo total de envío: $20000
+Gracias por su compra. Su pedido será procesado pronto.
 ---
 
 ## Reglas de Negocio Implementadas
