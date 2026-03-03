@@ -39,10 +39,11 @@ El programa solicita:
 - Cantidad de ítems (int)
 
   ## Salidas del sistema:
+  - categoria despacho (string)
+  - costo envio (double)
+    
 
--categoriaDespacho (string)
 
--costoEnvio (double)
 
 
 ---
