@@ -40,7 +40,7 @@ El programa solicita:
 
 ---
 
-## ⚙️ Reglas de Negocio Implementadas
+## Reglas de Negocio Implementadas
 
 1. Envío Gratis  
    - Si el monto es mayor o igual a 150000  
