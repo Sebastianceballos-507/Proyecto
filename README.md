@@ -1,7 +1,7 @@
 # Proyecto
-# 📦 Sistema de Clasificación de Pedidos
+#  Sistema de Clasificación de Pedidos
 
-## 📌 Descripción del Proyecto
+##  Descripción del Proyecto
 
 Este proyecto consiste en una aplicación de consola desarrollada en C# (.NET SDK) que permite clasificar un pedido según su categoría de despacho y calcular el costo total de envío.
 
@@ -9,7 +9,7 @@ El sistema analiza diferentes variables ingresadas por el usuario y aplica regla
 
 ---
 
-## 🎯 Propuesta de Solución
+##  Propuesta de Solución
 
 Se desarrolló un programa que:
 
@@ -29,7 +29,7 @@ La solución cumple con los requisitos técnicos solicitados:
 
 ---
 
-## 📥 Entradas del Sistema
+##  Entradas del Sistema
 
 El programa solicita:
 
@@ -42,25 +42,25 @@ El programa solicita:
 
 ## ⚙️ Reglas de Negocio Implementadas
 
-1. 🚚 Envío Gratis  
+1. Envío Gratis  
    - Si el monto es mayor o igual a 150000  
    - Y el cliente es recurrente  
 
-2. ⚡ Envío Express  
+2. Envío Express  
    - Si la cantidad de ítems es mayor o igual a 5  
    - O el monto es mayor o igual a 300000  
 
-3. 📦 Envío Estándar  
+3. Envío Estándar  
    - En cualquier otro caso  
 
-4. 🌎 Recargo adicional  
+4. Recargo adicional  
    - Si la ciudad destino es "exterior", se suma un valor adicional al costo de envío.
 
 ---
 
-## 🧪 Casos de Prueba
+## Casos de Prueba
 
-### 🔹 Caso 1 – Envío Gratis
+###  Caso 1 – Envío Gratis
 
 Entrada:
 Monto: 200000  
@@ -74,7 +74,7 @@ Costo total de envío: $0
 
 ---
 
-### 🔹 Caso 2 – Envío Express por cantidad de ítems
+### Caso 2 – Envío Express por cantidad de ítems
 
 Entrada:
 Monto: 100000  
@@ -88,7 +88,7 @@ Costo total de envío: $20000
 
 ---
 
-### 🔹 Caso 3 – Envío Express por monto alto
+###  Caso 3 – Envío Express por monto alto
 
 Entrada:
 Monto: 350000  
@@ -102,7 +102,7 @@ Costo total de envío: $20000
 
 ---
 
-### 🔹 Caso 4 – Envío Estándar + recargo exterior
+###  Caso 4 – Envío Estándar + recargo exterior
 
 Entrada:
 Monto: 80000  
