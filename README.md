@@ -128,7 +128,7 @@ Costo menor: $0
 
 ## Autor
 
-Sebastián Ceballos Juan Pablo Barrientos
+Sebastián Ceballos - Juan Pablo Barrientos
 
 ---
 
