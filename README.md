@@ -1,145 +1,140 @@
-# Proyecto
-#  Sistema de Clasificación de Pedidos
+# Sistema de Gestión de Envíos
 
-##  Descripción del Proyecto
+## Descripción
 
-Este proyecto consiste en una aplicación de consola desarrollada en C# (.NET SDK) que permite clasificar un pedido según su categoría de despacho y calcular el costo total de envío.
+Este proyecto es una aplicación de consola desarrollada en C# que permite registrar pedidos y calcular automáticamente el costo de envío según diferentes condiciones como el monto del pedido, tipo de cliente, cantidad de ítems y destino.
 
-El sistema analiza diferentes variables ingresadas por el usuario y aplica reglas de negocio utilizando estructuras condicionales.
-
----
-
-##  Propuesta de Solución
-
-Se desarrolló un programa que:
-
-- Solicita al usuario los datos del pedido.
-- Evalúa las condiciones mediante estructuras `if / else if / else`.
-- Aplica operadores lógicos `&&` y `||`.
-- Determina automáticamente la categoría de despacho.
-- Calcula el costo de envío según las reglas establecidas.
-- Muestra un mensaje claro y contextual al usuario.
-
-La solución cumple con los requisitos técnicos solicitados:
-- Uso de C# consola (.NET SDK)
-- Mínimo 3 estructuras condicionales
-- Uso de múltiples tipos de variables (double, int, string)
-- Conversión explícita con `Convert.ToDouble()` y `Convert.ToInt32()`
-- Mensajes de salida comprensibles
+El sistema también genera un reporte final con métricas básicas de los envíos registrados.
 
 ---
 
-##  Entradas del Sistema
+## Objetivos del proyecto
 
-El programa solicita:
-
-- Monto del pedido (double)
-- Ciudad destino (string)
-- Tipo de cliente ("nuevo" o "recurrente") (string)
-- Cantidad de ítems (int)
-
-  ## Salidas del sistema:
-  - categoria despacho (string)
-  - costo envio (double)
-    
-
-
-
+* Aplicar estructuras de control (`if`, `switch`, ciclos).
+* Validar entradas de usuario con `TryParse`.
+* Implementar almacenamiento dinámico con `List<T>`.
+* Generar reportes a partir de los datos ingresados.
 
 ---
 
-## Reglas de Negocio Implementadas
+## Funcionalidades
 
-1. Envío Gratis  
-   - Si el monto es mayor o igual a 150000  
-   - Y el cliente es recurrente  
+* Registro de múltiples pedidos
 
-2. Envío Express  
-   - Si la cantidad de ítems es mayor o igual a 5  
-   - O el monto es mayor o igual a 300000  
+* Validación de datos (formato y dominio)
 
-3. Envío Estándar  
-   - En cualquier otro caso  
+* Clasificación del tipo de envío:
 
-4. Recargo adicional  
-   - Si la ciudad destino es "exterior", se suma un valor adicional al costo de envío.
+  * Envío Gratis
+  * Envío Express
+  * Envío Estándar
 
----
+* Cálculo automático del costo de envío
 
-## Casos de Prueba
+* Recargo por envíos al exterior
 
-###  Caso 1 – Envío Gratis
+* Generación de reporte final con:
 
-Entrada:
-Monto: 200000  
-Ciudad: medellin  
-Tipo cliente: recurrente  
-Ítems: 2  
+  * Total de pedidos
+  * Costo promedio
+  * Costo mayor
+  * Costo menor
 
-Resultado esperado:
-Categoría: Envío Gratis  
-Costo total de envío: $0  
+* Manejo de casos sin datos (lista vacía)
 
 ---
 
-### Caso 2 – Envío Express por cantidad de ítems
+## Lógica del sistema
 
-Entrada:
-Monto: 100000  
-Ciudad: bogota  
-Tipo cliente: nuevo  
-Ítems: 6  
+El sistema clasifica los pedidos de la siguiente manera:
 
-Resultado esperado:
-Categoría: Envío Express  
-Costo total de envío: $20000  
+* Envío Gratis:
+  Cliente recurrente con compras ≥ $150.000
 
----
+* Envío Express:
+  Más de 5 ítems o compras ≥ $300.000
 
-###  Caso 3 – Envío Express por monto alto
+* Envío Estándar:
+  Cualquier otro caso
 
-Entrada:
-Monto: 350000  
-Ciudad: cali  
-Tipo cliente: nuevo  
-Ítems: 1  
+* Costo adicional:
 
-Resultado esperado:
-Categoría: Envío Express  
-Costo total de envío: $20000  
+  * $15.000 si el destino es exterior
 
 ---
 
-###  Caso 4 – Envío Estándar + recargo exterior
+## Tecnologías utilizadas
 
-Entrada:
-Monto: 80000  
-Ciudad: exterior  
-Tipo cliente: nuevo  
-Ítems: 2  
-
-Resultado esperado:
-Categoría: Envío Estándar  
-Costo total de envío: $25000  
+* Lenguaje: C#
+* Plataforma: .NET (Aplicación de consola)
 
 ---
 
-## Cómo Ejecutar el Proyecto
+## Cómo ejecutar el proyecto
 
-1. Abrir la terminal en la carpeta del proyecto.
-2. Ejecutar el siguiente comando:
+1. Clona el repositorio:
 
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
+```
+
+2. Abre el proyecto en Visual Studio o VS Code
+
+3. Ejecuta el programa:
+
+```bash
 dotnet run
-Estructura del Proyecto: 
-/SistemaClasificacionPedidos
-│
-├── Program.cs
-├── README.md
-└── .gitignore
- Autores
+```
 
-Sebastián Ceballos 
-Juan Pablo Barrientos
-Proyecto académico - Entrega 1
+---
+
+## Ejemplo de uso
+
+```
+Ingrese el monto del pedido: 200000
+Ingrese la ciudad destino: local
+Ingrese el tipo de cliente: recurrente
+Ingrese la cantidad de ítems: 3
+
+--- RESULTADO ---
+Categoría: Envío Gratis
+Costo envío: $0
+```
+
+---
+
+## Ejemplo de reporte
+
+```
+--- REPORTE ---
+Total pedidos: 3
+Costo promedio: $15000
+Costo mayor: $35000
+Costo menor: $0
+```
+
+---
+
+## Conceptos aplicados
+
+* do-while
+* switch
+* List<T>
+* TryParse
+* Validación de entradas
+* Ciclos (foreach)
+
+---
+
+## Autor
+
+Sebastián Ceballos Juan Pablo Barrientos
+
+---
+
+## Estado del proyecto
+
+Completo – Cumple con los requisitos de la Entrega 2
+
    
 
