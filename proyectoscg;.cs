@@ -14,7 +14,13 @@ class Program
     static void EjecutarSistema()
     {
         List<double> costosEnvio = new List<double>();
+       //  contadores por categoría
+        int contadorGratis = 0;
+        int contadorExpress = 0;
+        int contadorEstandar = 0;
+        
         string opcion;
+        
 
         do
         {
